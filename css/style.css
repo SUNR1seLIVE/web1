@@ -1,0 +1,144 @@
+body{
+    margin: 0; /* Убрал все отступы */
+    font-family: 'Raleway', sans-serif; /* Задал базовый шрифт для "body" */
+    font-size: 20px; /* Задал базовый размер шрифта для "body" */
+    color: #6c7279;  /* Задал базовый цвет шрифта для "body" */
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+p {
+    margin: 0 0 10px;
+}
+
+/* ===========container=========== */
+.container{
+    width: 100%; /* Задал ширину контейнера 100% */
+    max-width: 700px; /* Указал максимальную ширину в 700 пикселей */
+    margin: 0 auto; /* Выравнил по горизонтали по центру */
+}
+
+/* ===========Text=========== */
+
+.intro--title{    
+    padding: 30px 0 5px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 80px;    
+    font-weight: 400;
+    color:  #eaaf46;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro--subtitle{
+    padding-bottom:30px;
+    font-weight: 700;
+    color: #000;    
+}
+
+/* ===========Header=========== */
+header{    
+    background-color: #eaaf46; /* Задал цвет фона блока для "header" */
+}
+
+.header--inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Выравнил по вертикали по центру все входящие в блок итемы */
+    padding: 15px 0; /* Задал внутриние отступы блока "header--inner" */
+}
+
+/* ===========Navigation=========== */
+nav{
+    display: flex;
+    font-size: 14px; /* Задал размер шрифта для "nav" */
+    font-weight: 700;
+    text-transform: uppercase; /* Задал большие буквы шрифта для "nav" */
+}
+
+.nav--link{
+    margin-right: 10px;
+    color: #fff;  /* Задал белый цвет текста */
+    text-decoration: none;  /* убрал подчеркивание елемента по дефолту */
+    opacity: 0.75; /* Задал прозрачность текста ссылки 75% */
+    transition: opacity 0.2s linear; /* Задал плавный переход с 1 на 0.75 прозрачности */
+}
+
+.nav--link:hover{
+    opacity: 1; /* Задал, при наведении, прозрачность текста ссылки 100% */
+    
+}
+
+/* ===========Intro=========== */
+
+.section--intro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ===========Button=========== */
+
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 40px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;        
+}
+
+.bth--red{
+    background-color: #eaaf46;
+}
+
+/* ===========Info=========== */
+
+.info--block--title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    color: #000;
+    padding: 50px 0 10px;
+}
+
+.info--block{
+    padding-left: 13px;
+    text-align: left;
+}
+
+.info--title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    font-weight: 400;
+    color: #000;
+
+}
+
+.info--subtitle{
+    font-size: 18px;
+    color: #000;
+    line-height: 1.4;
+}
+
+.info--img{
+    padding-right: 13px;
+    width: 50%;
+}
+
+.info--block--right{
+    padding-right: 13px;
+    text-align: right;
+}

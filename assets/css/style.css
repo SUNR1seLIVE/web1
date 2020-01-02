@@ -3,19 +3,28 @@ body {
   background-color: #000;
 }
 
-h1,
+*,
+*:after,
+*:before {
+  margin: 0;
+}
+
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+} */
+
+header {  
+  background-color: #fff;
+  align-items: center;  
+  height: 300px;
 }
 
-header{
-    background-color:#fff;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 300px;
+.header--logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
 }

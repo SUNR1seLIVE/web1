@@ -1,0 +1,153 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  height: 1080px;
+  background: linear-gradient(45deg, #99b2db, #5c5696);
+}
+
+.unit {
+}
+
+.unit_temperature_c {
+}
+
+.unit_temperature_f {
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 9fr 2fr;
+  grid-template-areas: "header-logo header-text header-nav";
+  grid-row: 1fr;
+  min-height: 70px;
+  align-content: center;
+  background-color: #3c5c75;
+
+  &-logo {
+    grid-area: header-logo;
+    justify-self: center;
+    .icon__logo {
+      height: 50px;
+    }
+  }
+  &-text {
+    grid-area: header-text;
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+    font-weight: 700;
+    color: #fff;
+  }
+  &-nav {
+    grid-area: header-nav;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: " . . . input-search input-search  input-search input-search input-search input-search . . . " " . forecast-frame forecast-frame forecast-frame forecast-frame forecast-frame forecast-frame forecast-frame forecast-frame forecast-frame forecast-frame . ";
+  align-content: center;
+
+  .input-search {
+    grid-area: input-search;
+
+    .input-group {
+      margin: 30px 0;
+      .input-group-addon {
+        .icon__search {
+          height: 18px;
+          width: 18px;
+        }
+      }
+    }
+  }
+
+  .forecast-frame {
+    grid-area: forecast-frame;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px;
+    height: 100%;
+
+    .forecast-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "frame-items-day" "tabs";
+
+      .frame-items-day {
+        grid-area: frame-items-day;
+        display: grid;
+        grid-template-columns: 2fr 4fr 1fr;
+        grid-template-areas: "frame-items-1 now_time frame-items-add";
+        height: 500px;
+
+        .frame-items-1 {
+          grid-area: frame-items-1;
+          .now_astro {
+          }
+          .now_weather {
+          }
+          .now_feel {
+          }
+          .now_desc {
+            .tip {
+            }
+          }
+        }
+
+        .now_time {
+          grid-area: now_time;
+        }
+
+        .frame-items-add {
+          grid-area: frame-items-add;
+          .icon__heart {
+          }
+        }
+      }
+
+      .tabs {
+        margin: 0 10px 10px;
+        grid-area: tabs;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "tab-items tab-items1 tab-items2 tab-items3 tab-items4";
+        grid-column-gap: 20px;
+        height: 300px;
+
+        .tab-items {
+          grid-area: tab-items;
+
+          background-color: #fff;
+          padding: 10px;
+          border-radius: 5px 5px;
+          height: 100%;
+
+          .tab-wrap {
+            .tab-date {
+            }
+
+            .tab-templine {
+              .tab-templine-inner {
+                .chart {
+                  .values {
+                    .value {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

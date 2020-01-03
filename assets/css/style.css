@@ -10,6 +10,14 @@ body {
   background: linear-gradient(45deg, #99b2db, #5c5696);
 }
 
+.unit_temperature_c {
+  display: inline;
+}
+
+.unit_temperature_f {
+  display: none;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr 9fr 2fr;
@@ -67,22 +75,50 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "frame-items-day" "tabs";
+  background-image: url(../img/fon-winter.png);
+  border-radius: 3px;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day {
   grid-area: frame-items-day;
   display: grid;
   grid-template-columns: 2fr 4fr 1fr;
   grid-template-areas: "frame-items-1 now_time frame-items-add";
+  align-content: center;
   height: 500px;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 {
+  display: grid;
   grid-area: frame-items-1;
+  background-color: #fff;
+  padding: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  height: 500px;
+  border-radius: 50px 50px;
+  background-image: url(../img/items-1.jpg);
+  background-position: center;
+  background-clip: content-box;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .now_time {
   grid-area: now_time;
+  align-self: center;
+  justify-self: center;
+  font-size: 17px;
+  color: #fff;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-add {
   grid-area: frame-items-add;
+}
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-add .fia-btn {
+  align-self: center;
+  justify-self: center;
+}
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-add .icon__heart {
+  fill: #9c1d1d;
+  height: 30px;
+  width: 30px;
 }
 .main .forecast-frame .forecast-wrap .tabs {
   margin: 0 10px 10px;
@@ -91,12 +127,11 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "tab-items tab-items1 tab-items2 tab-items3 tab-items4";
   grid-column-gap: 20px;
-  height: 300px;
+  height: 100%;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items {
   grid-area: tab-items;
   background-color: #fff;
   padding: 10px;
   border-radius: 5px 5px;
-  height: 100%;
 }

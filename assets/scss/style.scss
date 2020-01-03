@@ -14,9 +14,11 @@ body {
 }
 
 .unit_temperature_c {
+    display: inline;
 }
 
 .unit_temperature_f {
+    display: none;
 }
 
 .header {
@@ -81,16 +83,32 @@ body {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-areas: "frame-items-day" "tabs";
+      background-image: url(../img/fon-winter.png);
+      border-radius: 3px;
 
       .frame-items-day {
         grid-area: frame-items-day;
         display: grid;
         grid-template-columns: 2fr 4fr 1fr;
         grid-template-areas: "frame-items-1 now_time frame-items-add";
+        align-content: center;
         height: 500px;
 
         .frame-items-1 {
+            display: grid;
           grid-area: frame-items-1;
+          background-color: #fff;
+          padding: 25px;
+          color: #fff;
+          font-size: 18px;
+          font-weight: 700;
+          color: #000;
+          height: 500px;
+          border-radius: 50px 50px;
+          background-image: url(../img/items-1.jpg);
+          background-position: center;
+          background-clip: content-box;
+
           .now_astro {
           }
           .now_weather {
@@ -105,11 +123,24 @@ body {
 
         .now_time {
           grid-area: now_time;
+          align-self: center;
+          justify-self: center;
+          font-size: 17px;
+          color: #fff;
         }
 
         .frame-items-add {
           grid-area: frame-items-add;
+
+          .fia-btn {
+            align-self: center;
+            justify-self: center;
+          }
+
           .icon__heart {
+            fill: rgb(156, 29, 29);
+            height: 30px;
+            width: 30px;
           }
         }
       }
@@ -121,7 +152,7 @@ body {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: "tab-items tab-items1 tab-items2 tab-items3 tab-items4";
         grid-column-gap: 20px;
-        height: 300px;
+        height: 100%;
 
         .tab-items {
           grid-area: tab-items;
@@ -129,7 +160,6 @@ body {
           background-color: #fff;
           padding: 10px;
           border-radius: 5px 5px;
-          height: 100%;
 
           .tab-wrap {
             .tab-date {

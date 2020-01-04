@@ -82,7 +82,7 @@ body {
 }
 .main .input-search .input-group {
   margin: 30px 0;
-  box-shadow: 3px 1px 10px 2px #08204d;
+  box-shadow: 3px 3px 10px 2px #08204d;
   transition-duration: 0.2s;
 }
 .main .input-search .input-group .input-group-addon .icon__search {
@@ -90,7 +90,7 @@ body {
   width: 18px;
 }
 .main .input-group:hover {
-  box-shadow: 5px 5px 10px 3px #073da1;
+  box-shadow: 5px 5px 10px 3px #08204d;
 }
 .main .forecast-frame {
   grid-area: forecast-frame;

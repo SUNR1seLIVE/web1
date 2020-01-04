@@ -96,7 +96,7 @@ body {
 
     .input-group {
       margin: 30px 0;
-      box-shadow: 3px 1px 10px 2px rgb(8, 32, 77);
+      box-shadow: 3px 3px 10px 2px rgb(8, 32, 77);
       transition-duration: 0.2s;
       .input-group-addon {
         .icon__search {
@@ -108,7 +108,7 @@ body {
   }
 
   .input-group:hover {
-    box-shadow: 5px 5px 10px 3px rgb(7, 61, 161);
+    box-shadow: 5px 5px 10px 3px rgb(8, 32, 77);
   }
 
   .forecast-frame {

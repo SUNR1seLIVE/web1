@@ -45,6 +45,7 @@ body {
   min-height: 70px;
   align-content: center;
   background-color: #3c5c75;
+  box-shadow: 2px 2px 8px 5px #08204d;
 }
 .header-logo {
   grid-area: header-logo;
@@ -52,6 +53,12 @@ body {
 }
 .header-logo .icon__logo {
   height: 50px;
+  border-radius: 13px;
+  box-shadow: 3px 3px 10px 2px #08204d;
+  transition-duration: 0.2s;
+}
+.header-logo .icon__logo:hover {
+  box-shadow: 5px 5px 10px 3px #08204d;
 }
 .header-text {
   grid-area: header-text;
@@ -69,6 +76,24 @@ body {
   grid-area: header-nav;
   align-self: center;
   justify-self: center;
+}
+.header-nav .nav-btn {
+  margin: 5px;
+  line-height: 1;
+  height: 30px;
+  background-color: #47aced;
+  border-color: #226a97;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 2px #08204d;
+  transition-duration: 0.2s;
+}
+.header-nav .nav-btn .icon__gear {
+  height: 18px;
+  width: 18px;
+}
+.header-nav .nav-btn:hover {
+  background-color: #7996e4;
+  box-shadow: 5px 5px 10px 3px #08204d;
 }
 
 .main {

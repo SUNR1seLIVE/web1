@@ -10,6 +10,10 @@ body {
   background: linear-gradient(45deg, #99b2db, #5c5696);
 }
 
+.unit {
+  display: inline;
+}
+
 .unit_temperature_c {
   display: inline;
 }
@@ -90,16 +94,31 @@ body {
   display: grid;
   grid-area: frame-items-1;
   background-color: #fff;
-  padding: 25px;
+  margin: 25px;
   color: #fff;
   font-size: 18px;
   font-weight: 700;
   color: #000;
-  height: 500px;
+  height: 450px;
   border-radius: 50px 50px;
   background-image: url(../img/items-1.jpg);
   background-position: center;
   background-clip: content-box;
+  box-shadow: 5px 3px 30px 2px #08204d;
+  align-items: center;
+  justify-items: center;
+}
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro {
+  font-size: 18px;
+}
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather {
+  font-size: 18px;
+}
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel {
+  font-size: 18px;
+}
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_desc .tip {
+  font-size: 18px;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .now_time {
   grid-area: now_time;
@@ -134,4 +153,10 @@ body {
   background-color: #fff;
   padding: 10px;
   border-radius: 5px 5px;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-items .tab-wrap .tab-date {
+  font-size: 18px;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-items .tab-wrap .tab-templine .tab-templine-inner .chart .values .value {
+  font-size: 18px;
 }

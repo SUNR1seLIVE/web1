@@ -11,14 +11,15 @@ body {
 }
 
 .unit {
+  display: inline;
 }
 
 .unit_temperature_c {
-    display: inline;
+  display: inline;
 }
 
 .unit_temperature_f {
-    display: none;
+  display: none;
 }
 
 .header {
@@ -77,6 +78,7 @@ body {
     background-color: #fff;
     padding: 10px;
     border-radius: 5px 5px;
+
     height: 100%;
 
     .forecast-wrap {
@@ -84,6 +86,7 @@ body {
       grid-template-columns: 1fr;
       grid-template-areas: "frame-items-day" "tabs";
       background-image: url(../img/fon-winter.png);
+
       border-radius: 3px;
 
       .frame-items-day {
@@ -95,28 +98,47 @@ body {
         height: 500px;
 
         .frame-items-1 {
-            display: grid;
+          display: grid;
           grid-area: frame-items-1;
           background-color: #fff;
-          padding: 25px;
+          margin: 25px;
           color: #fff;
           font-size: 18px;
           font-weight: 700;
           color: #000;
-          height: 500px;
+          height: 450px;
           border-radius: 50px 50px;
           background-image: url(../img/items-1.jpg);
           background-position: center;
           background-clip: content-box;
+          box-shadow: 5px 3px 30px 2px rgb(8, 32, 77);
+          align-items: center;
+          justify-items: center;
 
           .now_astro {
+            font-size: 18px;
+
+            .now_astro_item{
+
+            }
+
+            .item_sunrise{
+              
+            }
+
+            .item_sunset{
+
+            }
           }
           .now_weather {
+            font-size: 18px;
           }
           .now_feel {
+            font-size: 18px;
           }
           .now_desc {
             .tip {
+              font-size: 18px;
             }
           }
         }
@@ -163,6 +185,7 @@ body {
 
           .tab-wrap {
             .tab-date {
+              font-size: 18px;
             }
 
             .tab-templine {
@@ -170,6 +193,7 @@ body {
                 .chart {
                   .values {
                     .value {
+                      font-size: 18px;
                     }
                   }
                 }

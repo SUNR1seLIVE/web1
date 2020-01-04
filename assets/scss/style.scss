@@ -119,15 +119,15 @@ body {
             font-size: 18px;
 
             .now_astro_item{
-
+              color: #fff;
             }
 
             .item_sunrise{
-              
+              color: #fff;              
             }
 
             .item_sunset{
-
+              color: #fff;
             }
           }
           .now_weather {
@@ -192,7 +192,10 @@ body {
               .tab-templine-inner {
                 .chart {
                   .values {
-                    .value {
+                    .value_min {
+                      font-size: 18px;
+                    }
+                    .value_max {
                       font-size: 18px;
                     }
                   }

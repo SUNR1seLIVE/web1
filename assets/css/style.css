@@ -111,6 +111,15 @@ body {
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro {
   font-size: 18px;
 }
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item {
+  color: #fff;
+}
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .item_sunrise {
+  color: #fff;
+}
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .item_sunset {
+  color: #fff;
+}
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather {
   font-size: 18px;
 }
@@ -157,6 +166,9 @@ body {
 .main .forecast-frame .forecast-wrap .tabs .tab-items .tab-wrap .tab-date {
   font-size: 18px;
 }
-.main .forecast-frame .forecast-wrap .tabs .tab-items .tab-wrap .tab-templine .tab-templine-inner .chart .values .value {
+.main .forecast-frame .forecast-wrap .tabs .tab-items .tab-wrap .tab-templine .tab-templine-inner .chart .values .value_min {
+  font-size: 18px;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-items .tab-wrap .tab-templine .tab-templine-inner .chart .values .value_max {
   font-size: 18px;
 }

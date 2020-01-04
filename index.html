@@ -67,84 +67,107 @@
         </div>
         <div class="forecast-frame">
           <div class="forecast-wrap">
+            <!--===блок прогноза погоды на текущий день===-->
             <div class="frame-items-day">
+              <!--===Блок показания прогноза погоды на текущий день===-->
               <div class="frame-items-1">
-                <!--Блок показания прогноза погоды на текущий день-->
+                <!--===блок показания восхода и заката на данный день===-->
                 <div class="now_astro">
-                  <!--блок показания восхода и заката на данный день-->
                   <div class="now_astro_item item_sunrise">
                     <div class="now_astro_time">7:57</div>
-                    <div class="now_astro_caption">Восход</div>
+                    <div class="now_astro_caption">Sunrise</div>
                   </div>
                   <div class="now_astro_item item_sunset">
                     <div class="now_astro_time">16:47</div>
-                    <div class="now_astro_caption">Заход</div>
+                    <div class="now_astro_caption">Sunset</div>
                   </div>
+                </div>
+                <!--===блок показания восхода и заката на данный день===-->
 
-                </div>
-                <!--блок показания восхода и заката на данный день-->
+                <!--===блок показания температур на данный день===-->
                 <div class="now_weather">
-                    <span class="unit unit_temperature_c">+2,2</span>
-                  <!--блок показания температур на данный день-->
+                  <span class="unit unit_temperature_c">+2,2</span>
                 </div>
-                <!--блок показания температур на данный день-->
+                <!--===блок показания температур на данный день===-->
+
+                <!--===блок показания температур по ощущению на данный день===-->
                 <div class="now_feel">
-                  "По ощущению:"
+                  "By feeling:"
                   <span class="unit unit_temperature_c">-1</span>
                   <span class="unit unit_temperature_f">31</span>
                 </div>
+                <!--===блок показания температур по ощущению на данный день===-->
+
+                <!--===блок показания облочности на данный день===-->
                 <div class="now_desc">
-                  <span class="tip">Малооблачно</span>
+                  <span class="tip">Cloudy</span>
                 </div>
+                <!--===блок показания облочности на данный день===-->
               </div>
-              <!--Блок показания прогноза погоды на текущий день-->
+              <!--===Блок показания прогноза погоды на текущий день===-->
+
+              <!--====Текущая дата===-->
               <div class="now_time">
-                <!--Текущая дата-->
                 <time data-dateformat="D, j F, G:i">Пт, 3 января, 19:37</time>
               </div>
-              <!--Текущая дата-->
+              <!--===Текущая дата===-->
+              <!--===блок добавления города в избранное===-->
               <div class="frame-items-add">
-                <!--блок добавления города в избранное-->
                 <svg class="icon__heart">
                   <use xlink:href="#icon--heart"></use>
                 </svg>
-                <button class="btn btn-default fia-btn" type="submit">Add to Favorites
+                <button class="btn btn-default fia-btn" type="submit">
+                  Add to Favorites
                 </button>
               </div>
+              <!--===блок добавления города в избранное===-->
             </div>
+            <!--===блок прогноза погоды на текущий день===-->
+            <!--===блок прогноза погоды на следующие 5 дней===-->
             <div class="tabs">
-              <!--Вкладка (Блоки) температур-->
+              <!--===итем температур (1 из 5)===-->
               <div class="tab-items">
-                <!--итем температур (1 из 5)-->
+                <!--=== фоновый блок итема температур===-->
                 <div class="tab-wrap">
+                  <!--===дата итема температур===-->
                   <div class="tab-date">
-                    <!--дата итема температур-->
                     <span class="blue ">Пт, 3 янв</span>
                   </div>
+                  <!--===дата итема температур===-->
+                  <!--===контейнер блока показания температур===-->
                   <div class="tab-templine">
+                    <!--===фоновый блок показания температур===-->
                     <div class="tab-templine-inner">
+                      <!--===блок показания температур===-->
                       <div class="chart">
-                        <!--блок показания температур-->
+                        <!--===блок порога температур===-->
                         <div class="values">
-                          <!--блок порога температур-->
-                          <div class="value">
-                            <!--температура нижняя-->
+                          <!--===температура нижняя===-->
+                          <div class="value_min">
                             <span class="unit unit_temperature_c">−2</span>
                             <span class="unit unit_temperature_f">28</span>
                           </div>
-                          <div class="value">
-                            <!--температура верхняя-->
+                          <!--===температура нижняя===-->
+                          <!--===температура верхняя===-->
+                          <div class="value_max">
                             <span class="unit unit_temperature_c">+4</span>
                             <span class="unit unit_temperature_f">39</span>
                           </div>
+                          <!--===температура верхняя===-->
                         </div>
+                        <!--===блок порога температур===-->
                       </div>
+                      <!--===блок показания температур===-->
                     </div>
+                    <!--===фоновый блок показания температур===-->
                   </div>
+                  <!--===контейнер блока показания температур===-->
                 </div>
+                <!--=== фоновый блок итема температур===-->
               </div>
-              <!--итем температур (1 из 5)-->
+              <!--===итем температур (1 из 5)===-->
             </div>
+            <!--===блок прогноза погоды на следующие 5 дней===-->
           </div>
         </div>
       </main>

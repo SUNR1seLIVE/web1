@@ -12,17 +12,31 @@
   font-weight: normal;
   font-style: normal;
 }
-.unit, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_caption, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather, .main .forecast-frame .forecast-wrap .frame-items-day .now_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel {
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_caption, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather, .main .forecast-frame .forecast-wrap .frame-items-day .now_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box {
   font-style: italic;
   text-shadow: 2px 3px 8px #000;
 }
 
-.unit, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_caption, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather, .main .forecast-frame .forecast-wrap .frame-items-day .now_time {
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_caption, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather, .main .forecast-frame .forecast-wrap .frame-items-day .now_time {
   font-family: "Ibarra Real Nova", sans-serif;
 }
 
-.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel {
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box {
   font-family: "Open Sans", sans-serif;
+}
+
+.main .forecast-frame, .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-1, .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-2, .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-3, .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-4, .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-5 {
+  background: linear-gradient(45deg, #eae8e8, #9377c7);
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 10px 2px #08204d;
+          box-shadow: 3px 3px 10px 2px #08204d;
+}
+
+.main .forecast-frame .forecast-wrap .tabs .tab-wrap, .main .forecast-frame .forecast-wrap {
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 10px 2px #08204d;
+          box-shadow: 3px 3px 10px 2px #08204d;
 }
 
 .main .forecast-frame .forecast-wrap .frame-items-day, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro {
@@ -30,6 +44,27 @@
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+}
+
+.main .forecast-frame .forecast-wrap .tabs .tab-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "tab-date" "tab-templine";
+  grid-template-rows: 80px 150px;
+  background-color: #fff;
+}
+
+.main .forecast-frame .forecast-wrap .tabs .tab-templine .values .value_min, .main .forecast-frame .forecast-wrap .tabs .tab-templine .values .value_max {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  height: 70px;
+  width: 120px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 20px 2px #08204d;
+          box-shadow: 3px 3px 20px 2px #08204d;
+  font-size: 40px;
 }
 
 @-webkit-keyframes now_weather_size {
@@ -68,6 +103,14 @@ body {
   font-size: 18px;
   height: 1080px;
   background: linear-gradient(45deg, #99b2db, #5c5696);
+}
+
+.unit {
+  margin: auto;
+  font-family: "Ibarra Real Nova", sans-serif;
+  font-style: italic;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .unit_temperature_c {
@@ -174,51 +217,47 @@ body {
 }
 .main .forecast-frame {
   grid-area: f-f;
-  background: linear-gradient(45deg, #eae8e8, #9377c7);
-  padding: 5px;
-  border-radius: 10px;
-  -webkit-box-shadow: 3px 3px 10px 2px #08204d;
-          box-shadow: 3px 3px 10px 2px #08204d;
-  height: 100%;
+  height: 760px;
 }
 .main .forecast-frame .forecast-wrap {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "frame-items-day" "tabs";
+  grid-template-rows: 2fr 1fr;
+  height: 750px;
   background-image: url(../img/fon-winter.png);
-  -webkit-box-shadow: 3px 3px 10px 2px #08204d;
-          box-shadow: 3px 3px 10px 2px #08204d;
-  border-radius: 5px;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day {
   grid-area: frame-items-day;
   display: grid;
   grid-template-columns: 2fr 4fr 1fr;
   grid-template-areas: "f-i-1 n_t f-i-a";
+  grid-template-rows: 1fr;
   height: 500px;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "desc" "weather" "feel" "astro";
+  grid-template-rows: 2fr 5fr 1fr 2fr;
   grid-area: f-i-1;
   height: 450px;
+  min-width: 250px;
   width: 90%;
   background-color: #fff;
   background-image: url(../img/items-1.jpg);
   background-position: center;
   background-clip: content-box;
   border-radius: 50px;
+  border: 2px solid #535050;
   -webkit-box-shadow: 3px 3px 20px 2px #08204d;
           box-shadow: 3px 3px 20px 2px #08204d;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro {
   grid-area: astro;
   display: grid;
-  grid-template-columns: 1.5fr 2fr 1.5fr;
+  grid-template-columns: 1.2fr 2fr 1.2fr;
   grid-template-areas: "sunrise . sunset";
-  width: 100%;
-  height: 80px;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item {
   padding: 10px;
@@ -243,8 +282,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 210px;
-  width: 80%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -264,7 +301,12 @@ body {
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel {
   grid-area: feel;
-  color: #fff;
+  width: 180px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #e6e3e3;
   font-size: 24px;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_desc {
@@ -308,23 +350,84 @@ body {
   grid-area: tabs;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "t-i t-i-1 t-i-2 t-i-3 t-i-4";
-  grid-column-gap: 20px;
-  margin: 0 10px 10px;
-  height: 100%;
+  grid-template-areas: "t-i-f-1 t-i-f-2 t-i-f-3 t-i-f-4 t-i-f-5";
+  grid-template-rows: 1fr;
+  height: 250px;
 }
-.main .forecast-frame .forecast-wrap .tabs .tab-items {
-  grid-area: t-i;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-1 {
+  grid-area: t-i-f-1;
+  margin: 0px 5px 10px 10px;
 }
-.main .forecast-frame .forecast-wrap .tabs .tab-items .tab-wrap .tab-date {
-  font-size: 20px;
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-1 .tab-1-wrap-bg {
+  background-image: url(../img/items-clear.jpg);
 }
-.main .forecast-frame .forecast-wrap .tabs .tab-items .tab-wrap .tab-templine .tab-templine-inner .chart .values .value_min {
-  font-size: 20px;
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-2 {
+  grid-area: t-i-f-2;
+  margin: 0px 5px 10px 5px;
 }
-.main .forecast-frame .forecast-wrap .tabs .tab-items .tab-wrap .tab-templine .tab-templine-inner .chart .values .value_max {
-  font-size: 20px;
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-2 .tab-2-wrap-bg {
+  background-image: url(../img/items-rainy.jpg);
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-3 {
+  grid-area: t-i-f-3;
+  margin: 0px 5px 10px 5px;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-3 .tab-3-wrap-bg {
+  background-image: url(../img/items-foggy.jpg);
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-4 {
+  grid-area: t-i-f-4;
+  margin: 0px 5px 10px 5px;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-4 .tab-4-wrap-bg {
+  background-image: url(../img/items-overcast.jpg);
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-5 {
+  grid-area: t-i-f-5;
+  margin: 0px 10px 10px 5px;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-items-frame-5 .tab-5-wrap-bg {
+  background-image: url(../img/items-snowfall.jpg);
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-date {
+  grid-area: tab-date;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  width: 180px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  background-color: rgba(200, 240, 245, 0.3);
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 20px 2px #08204d;
+          box-shadow: 3px 3px 20px 2px #08204d;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-date .text-box {
+  display: block;
+  margin: auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-templine {
+  grid-area: tab-templine;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-templine .values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: ". value_max" "value_min value_max" "value_min .";
+  height: 150px;
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-templine .values .value_min {
+  grid-area: value_min;
+  background-color: rgba(40, 172, 212, 0.7);
+}
+.main .forecast-frame .forecast-wrap .tabs .tab-templine .values .value_max {
+  grid-area: value_max;
+  background-color: rgba(118, 197, 53, 0.7);
 }

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Пробный макет</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/css/style_night.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/style_night.css" />
   </head>
   <body>
+    
     <div class="container-1">
       <!-- Sprite SVG -->
       <svg style="display: none;">
@@ -79,7 +80,7 @@
 
       <header class="header">
         <a href="#" class="header-logo">
-          <img class="icon__logo" src="assets/img/logo.png" alt="logo" />
+          <img class="icon__logo" src="/assets/img/logo.png" alt="logo" />
         </a>
         <h2 class="header-text">Herolo Weather Task</h2>
         <nav class="header-nav">
@@ -87,7 +88,7 @@
           <button class="btn btn-default nav-btn" type="submit">
             Fovarites
           </button>
-          <button class="btn btn-default nav-btn" type="submit">
+          <button class="btn btn-default nav-btn" type="submit" data-toggle="modal" data-target="#modal_setting">
             <div>
               <svg class="icon__gear">
                 <use xlink:href="#icon--gear"></use>
@@ -358,5 +359,45 @@
       </main>
     </div>
     <div class="container-2"></div>
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="modal_setting">
+      <!-- Само модальное окно -->
+      <div class="modal-dialog" role="document">
+        <!-- Содержимое окна -->
+        <div class="modal-content">
+          <!-- Шапка модального окна -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <!-- Заголовок -->
+            <h4 class="modal-title">Settings</h4>
+          </div>
+          <!-- Тело модального окна -->
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <!-- Подвал модального окна -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Модальное окно -->
+
+    <!-- подключаем jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <!-- подключаем jQuery -->
+
+    <!-- подключаем bootstrep js -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- подключаем bootstrep js -->
+
   </body>
 </html>

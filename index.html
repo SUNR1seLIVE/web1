@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Пробный макет</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style_night.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <div class="container-1">
@@ -79,7 +79,7 @@
 
       <header class="header">
         <a href="#" class="header-logo">
-          <img class="icon__logo" src="/assets/img/logo.png" alt="logo" />
+          <img class="icon__logo" src="assets/img/logo.png" alt="logo" />
         </a>
         <h2 class="header-text">Herolo Weather Task</h2>
         <nav class="header-nav">
@@ -147,7 +147,8 @@
                 <!--===блок показания восхода и заката на данный день===-->
                 <!--===блок показания температур на данный день===-->
                 <div class="now_weather">
-                  <span class="unit unit_temperature_c">+2,2</span>
+                  <span class="unit unit_temperature_c">+2</span>
+                  <span class="unit unit_temperature_f">35,6</span>
                 </div>
                 <!--===блок показания температур на данный день===-->
                 <!--===блок показания температур по ощущению на данный день===-->
@@ -390,7 +391,19 @@
                 <input type="checkbox" id="check-style" />
               </div>
 
-              <div class="style-decs"></div>
+              <div class="style-decs">
+                Site style change
+              </div>
+            </div>
+
+            <div class="setting-temp">
+              <div class="check-container-temp">
+                <input type="checkbox" id="check-temp" />
+              </div>
+
+              <div class="temp-decs">
+                Сhange of units
+              </div>
             </div>
           </div>
           <!-- Подвал модального окна -->
@@ -422,13 +435,19 @@
     <!-- подключаем bootstrep js -->
 
     <!-- Смена темы сайта -->
-
     <script>
       $("#check-style").click(function() {
         $("body").toggleClass("style_body_active");
       });
     </script>
-
     <!-- Смена темы сайта -->
+
+    <!-- Смена едениц измерения температуры -->
+    <script>
+      $("#check-temp").click(function() {
+        $("body").toggleClass("temp_body_active");
+      });
+    </script>
+    <!-- Смена едениц измерения температуры -->
   </body>
 </html>

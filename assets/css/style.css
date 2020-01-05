@@ -12,7 +12,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_caption, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather, .main .forecast-frame .forecast-wrap .frame-items-day .now_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box {
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_caption, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather, .main .forecast-frame .forecast-wrap .frame-items-day .now_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_desc, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box {
   font-style: italic;
   text-shadow: 2px 3px 8px #000;
 }
@@ -21,7 +21,7 @@
   font-family: "Ibarra Real Nova", sans-serif;
 }
 
-.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box {
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_desc, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -110,6 +110,12 @@ body.style_body_active {
 body.style_body_active .header {
   background-color: #3cb1c5;
 }
+body.temp_body_active .unit_temperature_c {
+  display: none;
+}
+body.temp_body_active .unit_temperature_f {
+  display: inline;
+}
 
 .unit {
   margin: auto;
@@ -176,6 +182,9 @@ body.style_body_active .header {
   -ms-flex-item-align: center;
       align-self: center;
   justify-self: center;
+}
+.header-nav .btn.btn-default {
+  outline-style: none;
 }
 .header-nav .nav-btn {
   margin: 5px;
@@ -301,14 +310,6 @@ body.style_body_active .header {
           justify-content: center;
   color: #64c6ff;
   font-size: 100px;
-  -webkit-animation-name: now_weather_size;
-          animation-name: now_weather_size;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel {
   grid-area: feel;
@@ -322,7 +323,13 @@ body.style_body_active .header {
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_desc {
   grid-area: desc;
-  font-size: 30px;
+  width: 180px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #e6e3e3;
+  font-size: 24px;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day .now_time {
   grid-area: n_t;
@@ -346,8 +353,17 @@ body.style_body_active .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: 1;
+  height: 30px;
+  background-color: #addefd;
+  border-color: #226a97;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 10px 2px #08204d;
+          box-shadow: 3px 3px 10px 2px #08204d;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   margin-top: 10px;
-  width: 150px;
+  width: 160px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -356,6 +372,11 @@ body.style_body_active .header {
   fill: #9c1d1d;
   height: 20px;
   width: 20px;
+}
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-add .fia-btn:hover {
+  background-color: #7996e4;
+  -webkit-box-shadow: 5px 5px 10px 3px #08204d;
+          box-shadow: 5px 5px 10px 3px #08204d;
 }
 .main .forecast-frame .forecast-wrap .tabs {
   grid-area: tabs;
@@ -453,29 +474,28 @@ body.style_body_active .header {
   grid-template-columns: 1fr;
   grid-template-rows: 100px 100px;
   grid-template-areas: "setting-style" "setting-temp";
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .modal-body .setting-style {
   grid-area: setting-style;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px 50px;
-  grid-template-areas: "ch-c-s" "style-desc";
 }
 .modal-body .setting-style .check-container-style {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 25%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
 }
 .modal-body .setting-style .check-container-style input[type="checkbox"] {
   position: relative;
-  width: 120px;
-  height: 40px;
-  border: 4px solid #262626;
+  width: 50px;
+  height: 20px;
+  border: 2px solid #262626;
   border-radius: 20px;
-  background: #0a93c9 url(/assets/img/sun.png) center no-repeat;
+  background: #08066b url(/assets/img/moon.png) center no-repeat;
   background-size: cover;
+  outline-style: none;
   -webkit-appearance: none;
 }
 .modal-body .setting-style .check-container-style input[type="checkbox"]:before {
@@ -483,8 +503,8 @@ body.style_body_active .header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 58px;
-  height: 32px;
+  width: 23px;
+  height: 16px;
   background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#6b6b6b));
   background: linear-gradient(0deg, #000, #6b6b6b);
   border-radius: 20px;
@@ -492,10 +512,52 @@ body.style_body_active .header {
   transition: 0.5s;
 }
 .modal-body .setting-style .check-container-style input[type="checkbox"]:checked {
-  background: #08066b url(/assets/img/moon.png) center no-repeat;
+  background: #0a93c9 url(/assets/img/sun.png) center no-repeat;
   background-size: cover;
 }
 .modal-body .setting-style .check-container-style input[type="checkbox"]:checked:before {
   content: "";
-  left: 54px;
+  left: 23px;
+}
+.modal-body .setting-temp {
+  grid-area: setting-temp;
+}
+.modal-body .setting-temp .check-container-temp {
+  position: absolute;
+  top: 65%;
+  left: 25%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.modal-body .setting-temp .check-container-temp input[type="checkbox"] {
+  position: relative;
+  width: 50px;
+  height: 20px;
+  border: 2px solid #262626;
+  border-radius: 20px;
+  background: #0c6e8b;
+  background-size: cover;
+  outline-style: none;
+  -webkit-appearance: none;
+}
+.modal-body .setting-temp .check-container-temp input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 16px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#6b6b6b));
+  background: linear-gradient(0deg, #000, #6b6b6b);
+  border-radius: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.modal-body .setting-temp .check-container-temp input[type="checkbox"]:checked {
+  background: #0d0ac9;
+  background-size: cover;
+}
+.modal-body .setting-temp .check-container-temp input[type="checkbox"]:checked:before {
+  content: "";
+  left: 23px;
 }

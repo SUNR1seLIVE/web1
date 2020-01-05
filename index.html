@@ -363,7 +363,7 @@
     <!-- Модальное окно -->
     <div class="modal fade" id="modal_setting">
       <!-- Само модальное окно -->
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-sm" role="document">
         <!-- Содержимое окна -->
         <div class="modal-content">
           <!-- Шапка модального окна -->
@@ -374,7 +374,28 @@
           </div>
           <!-- Тело модального окна -->
           <div class="modal-body">
-            <p>One fine body&hellip;</p>
+
+            <div class="setting-style">
+              
+              <div class="check-container-style">
+                <input type="checkbox" id="check-style">
+              </div>
+
+              <div class="style-decs">
+
+              </div>
+
+
+
+            </div>
+
+            
+
+
+
+
+
+            
           </div>
           <!-- Подвал модального окна -->
           <div class="modal-footer">
@@ -398,6 +419,17 @@
     <!-- подключаем bootstrep js -->
     <script src="/assets/js/bootstrap.min.js"></script>
     <!-- подключаем bootstrep js -->
+
+
+    <!-- Смена темы сайта -->
+
+    <script>
+      $('#check-style').click(function(){
+        $('body').toggleClass('style_body_active');
+      })
+    </script>
+
+    <!-- Смена темы сайта -->
 
   </body>
 </html>

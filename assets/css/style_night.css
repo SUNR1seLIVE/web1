@@ -104,6 +104,12 @@ body {
   height: 1080px;
   background: linear-gradient(45deg, #99b2db, #5c5696);
 }
+body.style_body_active {
+  background: linear-gradient(45deg, #42e9ff, #ffca57);
+}
+body.style_body_active .header {
+  background-color: #3cb1c5;
+}
 
 .unit {
   margin: auto;
@@ -132,6 +138,9 @@ body {
   background-color: #3c5c75;
   -webkit-box-shadow: 2px 2px 8px 5px #08204d;
           box-shadow: 2px 2px 8px 5px #08204d;
+}
+.header.style_header_acrive {
+  background-color: #3cb1c5;
 }
 .header-logo {
   grid-area: header-logo;
@@ -225,7 +234,8 @@ body {
   grid-template-areas: "frame-items-day" "tabs";
   grid-template-rows: 2fr 1fr;
   height: 750px;
-  background-image: url(../img/fon-winter.png);
+  background: url(../img/fon-winter.png) center no-repeat;
+  background-size: cover;
 }
 .main .forecast-frame .forecast-wrap .frame-items-day {
   grid-area: frame-items-day;
@@ -245,7 +255,8 @@ body {
   min-width: 250px;
   width: 90%;
   background-color: #fff;
-  background-image: url(../img/items-1.jpg);
+  background: url(../img/items-1.jpg) center no-repeat;
+  background-size: cover;
   background-position: center;
   background-clip: content-box;
   border-radius: 50px;
@@ -359,35 +370,40 @@ body {
   margin: 0px 5px 10px 10px;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-1 .tab-1-wrap-bg {
-  background-image: url(../img/items-clear.jpg);
+  background: url(../img/items-clear.jpg) center no-repeat;
+  background-size: cover;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-2 {
   grid-area: t-i-f-2;
   margin: 0px 5px 10px 5px;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-2 .tab-2-wrap-bg {
-  background-image: url(../img/items-rainy.jpg);
+  background: url(../img/items-rainy.jpg) center no-repeat;
+  background-size: cover;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-3 {
   grid-area: t-i-f-3;
   margin: 0px 5px 10px 5px;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-3 .tab-3-wrap-bg {
-  background-image: url(../img/items-foggy.jpg);
+  background: url(../img/items-foggy.jpg) center no-repeat;
+  background-size: cover;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-4 {
   grid-area: t-i-f-4;
   margin: 0px 5px 10px 5px;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-4 .tab-4-wrap-bg {
-  background-image: url(../img/items-overcast.jpg);
+  background: url(../img/items-overcast.jpg) center no-repeat;
+  background-size: cover;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-5 {
   grid-area: t-i-f-5;
   margin: 0px 10px 10px 5px;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-items-frame-5 .tab-5-wrap-bg {
-  background-image: url(../img/items-snowfall.jpg);
+  background: url(../img/items-snowfall.jpg) center no-repeat;
+  background-size: cover;
 }
 .main .forecast-frame .forecast-wrap .tabs .tab-date {
   grid-area: tab-date;
@@ -430,4 +446,56 @@ body {
 .main .forecast-frame .forecast-wrap .tabs .tab-templine .values .value_max {
   grid-area: value_max;
   background-color: rgba(118, 197, 53, 0.7);
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px;
+  grid-template-areas: "setting-style" "setting-temp";
+}
+.modal-body .setting-style {
+  grid-area: setting-style;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px;
+  grid-template-areas: "ch-c-s" "style-desc";
+}
+.modal-body .setting-style .check-container-style {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.modal-body .setting-style .check-container-style input[type="checkbox"] {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  border: 4px solid #262626;
+  border-radius: 20px;
+  background: #0a93c9 url(/assets/img/sun.png) center no-repeat;
+  background-size: cover;
+  -webkit-appearance: none;
+}
+.modal-body .setting-style .check-container-style input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 32px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#6b6b6b));
+  background: linear-gradient(0deg, #000, #6b6b6b);
+  border-radius: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.modal-body .setting-style .check-container-style input[type="checkbox"]:checked {
+  background: #08066b url(/assets/img/moon.png) center no-repeat;
+  background-size: cover;
+}
+.modal-body .setting-style .check-container-style input[type="checkbox"]:checked:before {
+  content: "";
+  left: 54px;
 }

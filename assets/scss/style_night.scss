@@ -97,7 +97,7 @@ $item-graddient-ii: #f5e611;
 }
 %style-value {
   display: flex;
-  margin: auto;  
+  margin: auto;
   height: 70px;
   width: 120px;
   border-radius: $b-rad-ii;
@@ -135,8 +135,14 @@ body {
   font-size: 18px;
   height: 1080px;
   background: linear-gradient(45deg, #99b2db, #5c5696);
-}
+  &.style_body_active {
+    background: linear-gradient(45deg, #42e9ff, #ffca57);
 
+    .header {
+      background-color: #3cb1c5;
+    }
+  }
+}
 .unit {
   margin: auto;
   font-family: $font-ibarra;
@@ -161,6 +167,10 @@ body {
   align-content: center;
   background-color: #3c5c75;
   box-shadow: 2px 2px 8px 5px #08204d;
+
+  &.style_header_acrive {
+    background-color: #3cb1c5;
+  }
 
   &-logo {
     grid-area: header-logo;
@@ -255,7 +265,8 @@ body {
       grid-template-areas: "frame-items-day" "tabs";
       grid-template-rows: 2fr 1fr;
       height: 750px;
-      background-image: url(../img/fon-winter.png);
+      background: url(../img/fon-winter.png) center no-repeat;
+      background-size: cover;
       @extend %style-box-wrap;
 
       .frame-items-day {
@@ -278,7 +289,8 @@ body {
           min-width: 250px;
           width: 90%;
           background-color: #fff;
-          background-image: url(../img/items-1.jpg);
+          background: url(../img/items-1.jpg) center no-repeat;
+          background-size: cover;
           background-position: center;
           background-clip: content-box;
           border-radius: $b-rad-iv;
@@ -407,7 +419,8 @@ body {
           @extend %style-box-frame;
 
           .tab-1-wrap-bg {
-            background-image: url(../img/items-clear.jpg);
+            background: url(../img/items-clear.jpg) center no-repeat;
+            background-size: cover;
           }
         }
 
@@ -417,7 +430,8 @@ body {
           @extend %style-box-frame;
 
           .tab-2-wrap-bg {
-            background-image: url(../img/items-rainy.jpg);
+            background: url(../img/items-rainy.jpg) center no-repeat;
+            background-size: cover;
           }
         }
 
@@ -427,7 +441,8 @@ body {
           @extend %style-box-frame;
 
           .tab-3-wrap-bg {
-            background-image: url(../img/items-foggy.jpg);
+            background: url(../img/items-foggy.jpg) center no-repeat;
+            background-size: cover;
           }
         }
 
@@ -437,7 +452,8 @@ body {
           @extend %style-box-frame;
 
           .tab-4-wrap-bg {
-            background-image: url(../img/items-overcast.jpg);
+            background: url(../img/items-overcast.jpg) center no-repeat;
+            background-size: cover;
           }
         }
 
@@ -447,7 +463,8 @@ body {
           @extend %style-box-frame;
 
           .tab-5-wrap-bg {
-            background-image: url(../img/items-snowfall.jpg);
+            background: url(../img/items-snowfall.jpg) center no-repeat;
+            background-size: cover;
           }
         }
 
@@ -503,6 +520,61 @@ body {
               @extend %style-value;
               background-color: rgba(118, 197, 53, 0.7);
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px;
+  grid-template-areas: "setting-style" "setting-temp";
+
+  .setting-style {
+    grid-area: setting-style;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px;
+    grid-template-areas: "ch-c-s" "style-desc";
+
+    .check-container-style {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+
+      input[type="checkbox"] {
+        position: relative;
+        width: 120px;
+        height: 40px;
+        border: 4px solid #262626;
+        border-radius: 20px;
+        background: #0a93c9 url(/assets/img/sun.png) center no-repeat;
+        background-size: cover;
+
+        -webkit-appearance: none;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 58px;
+          height: 32px;
+          background: linear-gradient(0deg, #000, #6b6b6b);
+          border-radius: 20px;
+          transition: 0.5s;
+        }
+        &:checked {
+          background: #08066b url(/assets/img/moon.png) center no-repeat;
+          background-size: cover;
+          &:before {
+            content: "";
+            left: 54px;
           }
         }
       }

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/assets/css/style_night.css" />
   </head>
   <body>
-    
     <div class="container-1">
       <!-- Sprite SVG -->
       <svg style="display: none;">
@@ -88,7 +87,12 @@
           <button class="btn btn-default nav-btn" type="submit">
             Fovarites
           </button>
-          <button class="btn btn-default nav-btn" type="submit" data-toggle="modal" data-target="#modal_setting">
+          <button
+            class="btn btn-default nav-btn"
+            type="submit"
+            data-toggle="modal"
+            data-target="#modal_setting"
+          >
             <div>
               <svg class="icon__gear">
                 <use xlink:href="#icon--gear"></use>
@@ -368,43 +372,40 @@
         <div class="modal-content">
           <!-- Шапка модального окна -->
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
             <!-- Заголовок -->
             <h4 class="modal-title">Settings</h4>
           </div>
           <!-- Тело модального окна -->
           <div class="modal-body">
-
             <div class="setting-style">
-              
               <div class="check-container-style">
-                <input type="checkbox" id="check-style">
+                <input type="checkbox" id="check-style" />
               </div>
 
-              <div class="style-decs">
-
-              </div>
-
-
-
+              <div class="style-decs"></div>
             </div>
-
-            
-
-
-
-
-
-            
           </div>
           <!-- Подвал модального окна -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
             <button type="button" class="btn btn-primary">Save changes</button>
           </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
     <!-- Модальное окно -->
 
@@ -420,16 +421,14 @@
     <script src="/assets/js/bootstrap.min.js"></script>
     <!-- подключаем bootstrep js -->
 
-
     <!-- Смена темы сайта -->
 
     <script>
-      $('#check-style').click(function(){
-        $('body').toggleClass('style_body_active');
+      $("#check-style").click(function() {
+        $("body").toggleClass("style_body_active");
       });
     </script>
 
     <!-- Смена темы сайта -->
-
   </body>
 </html>

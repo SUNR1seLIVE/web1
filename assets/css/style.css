@@ -12,7 +12,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_caption, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather, .main .forecast-frame .forecast-wrap .frame-items-day .now_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_desc, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box {
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro .now_astro_item .now_astro_caption, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_weather, .main .forecast-frame .forecast-wrap .frame-items-day .now_time, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_desc, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box, .content_fovarites .item-town .item-town-inner .name-town, .content_fovarites .item-town .item-town-inner .now-desc-town {
   font-style: italic;
   text-shadow: 2px 3px 8px #000;
 }
@@ -21,7 +21,7 @@
   font-family: "Ibarra Real Nova", sans-serif;
 }
 
-.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_desc, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box {
+.main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_feel, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_desc, .main .forecast-frame .forecast-wrap .tabs .tab-date .text-box, .content_fovarites .item-town .item-town-inner .name-town, .content_fovarites .item-town .item-town-inner .now-desc-town {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -39,7 +39,7 @@
           box-shadow: 3px 3px 10px 2px #08204d;
 }
 
-.main .forecast-frame .forecast-wrap .frame-items-day, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro {
+.main .forecast-frame .forecast-wrap .frame-items-day, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1, .main .forecast-frame .forecast-wrap .frame-items-day .frame-items-1 .now_astro, .content_fovarites .item-town .item-town-inner {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -101,7 +101,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  height: 1080px;
+  height: 1vh;
   background: linear-gradient(45deg, #99b2db, #5c5696);
 }
 body.style_body_active {
@@ -114,6 +114,12 @@ body.temp_body_active .unit_temperature_c {
   display: none;
 }
 body.temp_body_active .unit_temperature_f {
+  display: inline;
+}
+body.fovarites_body_active .container-1 {
+  display: none;
+}
+body.fovarites_body_active .container-2 {
   display: inline;
 }
 
@@ -131,6 +137,14 @@ body.temp_body_active .unit_temperature_f {
 
 .unit_temperature_f {
   display: none;
+}
+
+.container-1 {
+  display: inline;
+}
+
+.container-2 {
+  display: inline;
 }
 
 .header {
@@ -560,4 +574,59 @@ body.temp_body_active .unit_temperature_f {
 .modal-body .setting-temp .check-container-temp input[type="checkbox"]:checked:before {
   content: "";
   left: 23px;
+}
+
+.content_fovarites {
+  margin: 30px auto 10px auto;
+  display: grid;
+  grid-template-rows: minmax(300px, -webkit-min-content);
+  grid-template-rows: minmax(300px, min-content);
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(auto-fit, 100px);
+  width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+}
+.content_fovarites .item-town {
+  margin: auto;
+  display: grid;
+  grid-template-rows: minmax(280px, -webkit-min-content);
+  grid-template-rows: minmax(280px, min-content);
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-auto-rows: 280px;
+}
+.content_fovarites .item-town .item-town-inner {
+  display: grid;
+  margin: 0 10px;
+  background-color: #333;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5), 0px 2px 0px rgba(255, 255, 255, 0.5);
+          box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5), 0px 2px 0px rgba(255, 255, 255, 0.5);
+  grid-template-rows: minmax(50px, -webkit-min-content);
+  grid-template-rows: minmax(50px, min-content);
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: repeat(auto-fit, 1fr);
+}
+.content_fovarites .item-town .item-town-inner .name-town {
+  width: 180px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #e6e3e3;
+  font-size: 24px;
+}
+.content_fovarites .item-town .item-town-inner .now-weather-towm {
+  font-size: 80px;
+  color: #000;
+}
+.content_fovarites .item-town .item-town-inner .now-desc-town {
+  width: 180px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #e6e3e3;
+  font-size: 24px;
 }

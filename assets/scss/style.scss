@@ -1,4 +1,4 @@
-// Блок подключения шрифтов
+// Font Connection Block
 @font-face {
   font-family: "Ibarra Real Nova";
   src: url("../fonts/");
@@ -23,9 +23,9 @@
   font-weight: normal;
   font-style: normal;
 }
-// Блок подключения шрифтов
+// Font Connection Block
 
-// Блок переменных
+// Variable block
 
 $font-open-sans: "Open Sans", sans-serif;
 $font-ibarra: "Ibarra Real Nova", sans-serif;
@@ -41,9 +41,9 @@ $b-rad-iv: 50px;
 $item-graddient-i: #101274;
 $item-graddient-ii: #f5e611;
 
-// Блок переменных
+// Variable block
 
-// Блок мексин
+// Mexin block
 
 %font-style-shadow {
   font-style: italic;
@@ -105,9 +105,9 @@ $item-graddient-ii: #f5e611;
   font-size: 40px;
 }
 
-// Блок мексин
+// Mexin block
 
-// блок анимаций
+// animation block
 
 @keyframes now_weather_size {
   0% {
@@ -121,7 +121,7 @@ $item-graddient-ii: #f5e611;
   }
 }
 
-// блок анимаций
+// animation block
 
 *,
 *:before,
@@ -150,16 +150,7 @@ body {
     .unit_temperature_f {
       display: inline;
     }
-  }
-
-  &.fovarites_body_active {
-    .container-1 {
-      display: none;
-    }
-    .container-2 {
-      display: inline;
-    }
-  }
+  }  
 }
 .unit {
   margin: auto;
@@ -692,7 +683,7 @@ body {
     .item-town-inner {
       display: grid;
       margin: 0 10px;
-      background-color: #333;      
+      background: linear-gradient(45deg, #eae8e8, #9377c7);      
       border-radius: 20px;
       box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5), 0px 2px 0px rgba(255, 255, 255, 0.5);
 

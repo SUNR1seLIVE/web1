@@ -116,12 +116,6 @@ body.temp_body_active .unit_temperature_c {
 body.temp_body_active .unit_temperature_f {
   display: inline;
 }
-body.fovarites_body_active .container-1 {
-  display: none;
-}
-body.fovarites_body_active .container-2 {
-  display: inline;
-}
 
 .unit {
   margin: auto;
@@ -599,7 +593,7 @@ body.fovarites_body_active .container-2 {
 .content_fovarites .item-town .item-town-inner {
   display: grid;
   margin: 0 10px;
-  background-color: #333;
+  background: linear-gradient(45deg, #eae8e8, #9377c7);
   border-radius: 20px;
   -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5), 0px 2px 0px rgba(255, 255, 255, 0.5);
           box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5), 0px 2px 0px rgba(255, 255, 255, 0.5);

@@ -82,11 +82,7 @@
       <h2 class="header-text">Herolo Weather Task</h2>
       <nav class="header-nav">
         <button class="btn btn-default nav-btn" type="submit">Home</button>
-        <button
-          class="btn btn-default nav-btn"
-          type="submit"
-          id="btn-fovarites"
-        >
+        <button class="btn btn-default nav-btn" type="submit">
           Fovarites
         </button>
         <button
@@ -106,9 +102,9 @@
 
     <div class="container-1">
       <main class="main">
-        <!--===блок поиска города===-->
+        <!--===city ​​search block===-->
         <div class="input-search">
-          <!--===компонент bootstrap input поиска города===-->
+          <!--===city ​​bootstrap input component===-->
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">
               <svg class="icon__search">
@@ -122,59 +118,64 @@
               aria-describedby="basic-addon1"
             />
           </div>
-          <!--===компонент bootstrap input поиска города===-->
+          <!--===city ​​bootstrap input component===-->
         </div>
-        <!--===блок поиска города===-->
-        <!--===блок прогноза погоды===-->
+        <!--===city ​​search block===-->
+        <!--===weather forecast block===-->
         <div class="forecast-frame">
-          <!--===фоновый блок прогноза погоды===-->
+          <!--===weather forecast background block===-->
           <div class="forecast-wrap">
-            <!--===блок прогноза погоды на текущий день===-->
+            <!--===current weather forecast block===-->
             <div class="frame-items-day">
-              <!--===Блок показания прогноза погоды на текущий день===-->
+              <!--===The block of the weather forecast for the current day===-->
               <div class="frame-items-1">
-                <!--===блок показания восхода и заката на данный день===-->
+                <!--===current day sunrise and sunset block===-->
                 <div class="now_astro">
-                  <!--=== Блок "Восхода" ===-->
+                  <!--=== Block "Sunrise" ===-->
                   <div class="now_astro_item item_sunrise">
                     <div class="now_astro_time">7:57</div>
                     <div class="now_astro_caption">Sunrise</div>
                   </div>
-                  <!--=== Блок "Восхода" ===-->
-                  <!--=== Блок "Заката" ===-->
+                  <!--=== Block "Sunrise" ===-->
+                  <!--=== Block "Sunset" ===-->
                   <div class="now_astro_item item_sunset">
                     <div class="now_astro_time">16:47</div>
                     <div class="now_astro_caption">Sunset</div>
                   </div>
-                  <!--=== Блок "Заката" ===-->
+                  <!--=== Block "Sunset" ===-->
                 </div>
-                <!--===блок показания восхода и заката на данный день===-->
-                <!--===блок показания температур на данный день===-->
+                <!--===current day sunrise and sunset block===-->
+
+                <!--===block temperature readings for the current day===-->
                 <div class="now_weather">
                   <span class="unit unit_temperature_c">+2</span>
                   <span class="unit unit_temperature_f">35,6</span>
                 </div>
-                <!--===блок показания температур на данный день===-->
-                <!--===блок показания температур по ощущению на данный день===-->
+                <!--===block temperature readings for the current day===-->
+
+                <!--===sensing temperature block for the current day===-->
                 <div class="now_feel">
                   By feeling:
                   <span class="unit unit_temperature_c">-1</span>
                   <span class="unit unit_temperature_f">31</span>
                 </div>
-                <!--===блок показания температур по ощущению на данный день===-->
-                <!--===блок показания облочности на данный день===-->
+                <!--===sensing temperature block for the current day===-->
+
+                <!--===block of indication of cloudiness for the current day===-->
                 <div class="now_desc">
                   <span class="tip">Cloudy</span>
                 </div>
-                <!--===блок показания облочности на данный день===-->
+                <!--===block of indication of cloudiness for the current day===-->
               </div>
-              <!--===Блок показания прогноза погоды на текущий день===-->
-              <!--====Текущая дата===-->
+              <!--===The block of the weather forecast for the current day===-->
+
+              <!--====The current date===-->
               <div class="now_time">
                 <time data-dateformat="D, j F, G:i">Fr, 3 January, 19:37</time>
               </div>
-              <!--===Текущая дата===-->
-              <!--===блок добавления города в избранное===-->
+              <!--===The current date===-->
+
+              <!--===block to add a city to favorites===-->
               <div class="frame-items-add">
                 <button class="btn btn-default fia-btn" type="submit">
                   <div>
@@ -185,208 +186,191 @@
                   <div>Add to Fovarites</div>
                 </button>
               </div>
-              <!--===блок добавления города в избранное===-->
+              <!--===block to add a city to favorites===-->
             </div>
-            <!--===блок прогноза погоды на текущий день===-->
-            <!--===блок прогноза погоды на следующие 5 дней===-->
+            <!--===current weather forecast block===-->
+            <!--===Weather forecast block for the next 5 days===-->
             <div class="tabs">
-              <!--===итем температур (1 из 5)===-->
+              <!--===temperature item (1 out of 5)===-->
               <div class="tab-items-frame-1">
-                <!--=== фоновый блок итема температур===-->
+                <!--===temperature item background===-->
                 <div class="tab-wrap tab-1-wrap-bg">
-                  <!--===дата итема температур===-->
+                  <!--===temperature item date===-->
                   <div class="tab-date">
                     <span class="blue text-box">Sa, 4 January</span>
                   </div>
-                  <!--===дата итема температур===-->
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature item date===-->
+                  <!--===temperature container unit===-->
                   <div class="tab-templine">
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                     <div class="values">
-                      <!--===температура нижняя===-->
+                      <!--===lower temperature===-->
                       <div class="value_min">
                         <span class="unit unit_temperature_c">−2</span>
                         <span class="unit unit_temperature_f">28</span>
                       </div>
-                      <!--===температура нижняя===-->
-                      <!--===температура верхняя===-->
+                      <!--===lower temperature===-->
+                      <!--===upper temperature===-->
                       <div class="value_max">
                         <span class="unit unit_temperature_c">+4</span>
                         <span class="unit unit_temperature_f">39</span>
                       </div>
-                      <!--===температура верхняя===-->
+                      <!--===upper temperature===-->
                     </div>
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                   </div>
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature container unit===-->
                 </div>
-                <!--=== фоновый блок итема температур===-->
+                <!--===temperature item background===-->
               </div>
-              <!--===итем температур (1 из 5)===-->
+              <!--===temperature item (1 out of 5)===-->
 
-              <!--===итем температур (2 из 5)===-->
+              <!--===temperature item (2 out of 5)===-->
               <div class="tab-items-frame-2">
-                <!--=== фоновый блок итема температур===-->
+                <!--===temperature item background===-->
                 <div class="tab-wrap tab-2-wrap-bg">
-                  <!--===дата итема температур===-->
+                  <!--===temperature item date===-->
                   <div class="tab-date">
                     <span class="blue text-box">Su, 5 January</span>
                   </div>
-                  <!--===дата итема температур===-->
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature item date===-->
+                  <!--===temperature container unit===-->
                   <div class="tab-templine">
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                     <div class="values">
-                      <!--===температура нижняя===-->
+                      <!--===lower temperature===-->
                       <div class="value_min">
                         <span class="unit unit_temperature_c">−2</span>
                         <span class="unit unit_temperature_f">28</span>
                       </div>
-                      <!--===температура нижняя===-->
-                      <!--===температура верхняя===-->
+                      <!--===lower temperature===-->
+                      <!--===upper temperature===-->
                       <div class="value_max">
                         <span class="unit unit_temperature_c">+4</span>
                         <span class="unit unit_temperature_f">39</span>
                       </div>
-                      <!--===температура верхняя===-->
+                      <!--===upper temperature===-->
                     </div>
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                   </div>
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature container unit===-->
                 </div>
-                <!--=== фоновый блок итема температур===-->
+                <!--=== temperature item background===-->
               </div>
-              <!--===итем температур (2 из 5)===-->
+              <!--===temperature item (2 out of 5)===-->
 
-              <!--===итем температур 3 из 5)===-->
+              <!--===temperature item (3 out of 5)===-->
               <div class="tab-items-frame-3">
-                <!--=== фоновый блок итема температур===-->
+                <!--===temperature item background===-->
                 <div class="tab-wrap tab-3-wrap-bg">
-                  <!--===дата итема температур===-->
+                  <!--===temperature item date===-->
                   <div class="tab-date">
                     <span class="blue text-box">Mo, 6 January</span>
                   </div>
-                  <!--===дата итема температур===-->
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature item date===-->
+                  <!--===temperature container unit===-->
                   <div class="tab-templine">
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                     <div class="values">
-                      <!--===температура нижняя===-->
+                      <!--===lower temperature===-->
                       <div class="value_min">
                         <span class="unit unit_temperature_c">−2</span>
                         <span class="unit unit_temperature_f">28</span>
                       </div>
-                      <!--===температура нижняя===-->
-                      <!--===температура верхняя===-->
+                      <!--===lower temperature===-->
+                      <!--===upper temperature===-->
                       <div class="value_max">
                         <span class="unit unit_temperature_c">+4</span>
                         <span class="unit unit_temperature_f">39</span>
                       </div>
-                      <!--===температура верхняя===-->
+                      <!--===upper temperature===-->
                     </div>
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                   </div>
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature container unit===-->
                 </div>
-                <!--=== фоновый блок итема температур===-->
+                <!--=== temperature item background===-->
               </div>
-              <!--===итем температур (3 из 5)===-->
+              <!--===temperature item (3 out of 5)===-->
 
-              <!--===итем температур (4 из 5)===-->
+              <!--===temperature item (4 out of 5)===-->
               <div class="tab-items-frame-4">
-                <!--=== фоновый блок итема температур===-->
+                <!--===temperature item background===-->
                 <div class="tab-wrap tab-4-wrap-bg">
-                  <!--===дата итема температур===-->
+                  <!--===temperature item date===-->
                   <div class="tab-date">
                     <span class="blue text-box">Tu, 7 January</span>
                   </div>
-                  <!--===дата итема температур===-->
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature item date===-->
+                  <!--===temperature container unit===-->
                   <div class="tab-templine">
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                     <div class="values">
-                      <!--===температура нижняя===-->
+                      <!--===lower temperature===-->
                       <div class="value_min">
                         <span class="unit unit_temperature_c">−2</span>
                         <span class="unit unit_temperature_f">28</span>
                       </div>
-                      <!--===температура нижняя===-->
-                      <!--===температура верхняя===-->
+                      <!--===lower temperature===-->
+                      <!--===upper temperature===-->
                       <div class="value_max">
                         <span class="unit unit_temperature_c">+4</span>
                         <span class="unit unit_temperature_f">39</span>
                       </div>
-                      <!--===температура верхняя===-->
+                      <!--===upper temperature===-->
                     </div>
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                   </div>
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature container unit===-->
                 </div>
-                <!--=== фоновый блок итема температур===-->
+                <!--=== temperature item background===-->
               </div>
-              <!--===итем температур (4 из 5)===-->
+              <!--===temperature item (4 out of 5)===-->
 
-              <!--===итем температур (5 из 5)===-->
+              <!--===temperature item (5 out of 5)===-->
               <div class="tab-items-frame-5">
-                <!--=== фоновый блок итема температур===-->
+                <!--===temperature item background===-->
                 <div class="tab-wrap tab-5-wrap-bg">
-                  <!--===дата итема температур===-->
+                  <!--===temperature item date===-->
                   <div class="tab-date">
                     <span class="blue text-box">We, 8 January</span>
                   </div>
-                  <!--===дата итема температур===-->
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature item date===-->
+                  <!--===temperature container unit===-->
                   <div class="tab-templine">
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                     <div class="values">
-                      <!--===температура нижняя===-->
+                      <!--===lower temperature===-->
                       <div class="value_min">
                         <span class="unit unit_temperature_c">−2</span>
                         <span class="unit unit_temperature_f">28</span>
                       </div>
-                      <!--===температура нижняя===-->
-                      <!--===температура верхняя===-->
+                      <!--===lower temperature===-->                      
+                      <!--===upper temperature===-->
                       <div class="value_max">
                         <span class="unit unit_temperature_c">+4</span>
                         <span class="unit unit_temperature_f">39</span>
                       </div>
-                      <!--===температура верхняя===-->
+                      <!--===upper temperature===-->
                     </div>
-                    <!--===блок порога температур===-->
+                    <!--===temperature threshold block===-->
                   </div>
-                  <!--===контейнер блока показания температур===-->
+                  <!--===temperature container unit===-->
                 </div>
-                <!--=== фоновый блок итема температур===-->
+                <!--=== temperature item background===-->
               </div>
-              <!--===итем температур (5 из 5)===-->
+              <!--===temperature item (5 out of 5)===-->
             </div>
-            <!--===блок прогноза погоды на следующие 5 дней===-->
+            <!--===Weather forecast block for the next 5 days===-->
           </div>
-          <!--===фоновый блок прогноза погоды===-->
+          <!--===weather forecast background block===-->
         </div>
-        <!--===блок прогноза погоды===-->
+        <!--===weather forecast block===-->
       </main>
     </div>
 
     <div class="container-2">
       <div class="content_fovarites">
-
-        <div class="item-town">
-          <div class="item-town-inner">
-            <div class="name-town">
-              Tel-Aviv
-            </div>
-            <div class="now-weather-towm">
-              <span class="unit unit_temperature_c">+2</span>
-              <span class="unit unit_temperature_f">35,6</span>
-            </div>
-            <div class="now-desc-town">
-              <span class="tip">Cloudy</span>
-            </div>
-          </div>
-        </div>
-
-
         <div class="item-town">
           <div class="item-town-inner">
             <div class="name-town">
@@ -447,16 +431,30 @@
           </div>
         </div>
 
+        <div class="item-town">
+          <div class="item-town-inner">
+            <div class="name-town">
+              Tel-Aviv
+            </div>
+            <div class="now-weather-towm">
+              <span class="unit unit_temperature_c">+2</span>
+              <span class="unit unit_temperature_f">35,6</span>
+            </div>
+            <div class="now-desc-town">
+              <span class="tip">Cloudy</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Модальное окно -->
+    <!-- Modal window -->
     <div class="modal fade" id="modal_setting">
-      <!-- Само модальное окно -->
+      <!-- The modal window itself -->
       <div class="modal-dialog modal-sm" role="document">
-        <!-- Содержимое окна -->
+        <!-- Window contents -->
         <div class="modal-content">
-          <!-- Шапка модального окна -->
+          <!-- Modal hat -->
           <div class="modal-header">
             <button
               type="button"
@@ -466,10 +464,10 @@
             >
               <span aria-hidden="true">&times;</span>
             </button>
-            <!-- Заголовок -->
+            <!-- Headline -->
             <h4 class="modal-title">Settings</h4>
           </div>
-          <!-- Тело модального окна -->
+          <!-- Modal window body -->
           <div class="modal-body">
             <div class="setting-style">
               <div class="check-container-style">
@@ -491,7 +489,7 @@
               </div>
             </div>
           </div>
-          <!-- Подвал модального окна -->
+          <!-- Basement modal window -->
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">
               Close
@@ -505,42 +503,34 @@
     </div>
     <!-- /.modal -->
 
-    <!-- Модальное окно -->
+    <!-- Modal window -->
 
-    <!-- подключаем jQuery -->
+    <!-- connect jQuery -->
     <script
       src="https://code.jquery.com/jquery-1.12.4.min.js"
       integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
       crossorigin="anonymous"
     ></script>
-    <!-- подключаем jQuery -->
+    <!-- connect jQuery -->
 
-    <!-- подключаем bootstrep js -->
+    <!-- connect bootstrep js -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- подключаем bootstrep js -->
+    <!-- connect bootstrep js -->
 
-    <!-- Смена темы сайта -->
+    <!-- Change the theme of the site -->
     <script>
       $("#check-style").click(function() {
         $("body").toggleClass("style_body_active");
       });
     </script>
-    <!-- Смена темы сайта -->
+    <!-- Change the theme of the site -->
 
-    <!-- Смена едениц измерения температуры -->
+    <!-- Change temperature units -->
     <script>
       $("#check-temp").click(function() {
         $("body").toggleClass("temp_body_active");
       });
     </script>
-    <!-- Смена едениц измерения температуры -->
-
-    <!-- Переход на страницу Fovarites -->
-    <script>
-      $("#btn-fovarites").click(function() {
-        $("body").toggleClass("fovarites_body_active");
-      });
-    </script>
-    <!-- Переход на страницу Fovarites -->
+    <!-- Change temperature units -->
   </body>
 </html>

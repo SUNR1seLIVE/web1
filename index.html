@@ -101,21 +101,26 @@
     </header>
 
     <div class="container-1">
+      <section></section>
+
       <main class="main">
         <!--===city ​​search block===-->
         <div class="input-search">
           <!--===city ​​bootstrap input component===-->
           <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">
-              <svg class="icon__search">
-                <use xlink:href="#icon--search"></use>
-              </svg>
+            <span class="input-group-btn" id="basic-addon1">
+              <button class="btn btn-default search-btn" type="button">
+                <svg class="icon__search">
+                  <use xlink:href="#icon--search"></use>
+                </svg>
+              </button>
             </span>
             <input
               type="text"
               class="form-control"
               placeholder="tel aviv"
               aria-describedby="basic-addon1"
+              style="padding: 12px;"
             />
           </div>
           <!--===city ​​bootstrap input component===-->
@@ -345,7 +350,7 @@
                         <span class="unit unit_temperature_c">−2</span>
                         <span class="unit unit_temperature_f">28</span>
                       </div>
-                      <!--===lower temperature===-->                      
+                      <!--===lower temperature===-->
                       <!--===upper temperature===-->
                       <div class="value_max">
                         <span class="unit unit_temperature_c">+4</span>

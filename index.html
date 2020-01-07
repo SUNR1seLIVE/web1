@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Пробный макет</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -76,298 +76,48 @@
     </svg>
 
     <header class="header">
-      <a href="#" class="header-logo">
-        <img class="icon__logo" src="assets/img/logo.png" alt="logo" />
-      </a>
-      <h2 class="header-text">Herolo Weather Task</h2>
-      <nav class="header-nav">
-        <button class="btn btn-default nav-btn" type="submit">Home</button>
-        <button class="btn btn-default nav-btn" type="submit">
-          Fovarites
-        </button>
-        <button
-          class="btn btn-default nav-btn"
-          type="submit"
-          data-toggle="modal"
-          data-target="#modal_setting"
-        >
-          <div>
-            <svg class="icon__gear">
-              <use xlink:href="#icon--gear"></use>
-            </svg>
-          </div>
-        </button>
+
+      <div class="logo">
+
+      </div>
+
+      <div class="header-title">
+        <span>
+          <h1>Herolo Weather Task</h1>
+        </span>
+      </div>
+
+      <nav class="header-settings">
+        <a href="#" class="btn btn-nav">С<sup>0</sup>/F<sup>0</sup></a>
+        <a href="#" class="btn btn-nav">Day/Naight</a>
       </nav>
+
+      <nav class="header-nav">
+        <a href="#" class="btn btn-nav">Home</a>
+        <a href="#" class="btn btn-nav">Fovarites</a>
+      </nav>
+      
     </header>
 
-    <div class="container-1">
-      <main class="main">
-        <!--===city ​​search block===-->
-        <div class="input-search">
-          <!--===city ​​bootstrap input component===-->
-          <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">
-              <svg class="icon__search">
-                <use xlink:href="#icon--search"></use>
-              </svg>
-            </span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="tel aviv"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-          <!--===city ​​bootstrap input component===-->
-        </div>
-        <!--===city ​​search block===-->
-        <!--===weather forecast block===-->
-        <div class="forecast-frame">
-          <!--===weather forecast background block===-->
-          <div class="forecast-wrap">
-            <!--===current weather forecast block===-->
-            <div class="frame-items-day">
-              <!--===The block of the weather forecast for the current day===-->
-              <div class="frame-items-1">
-                <!--===current day sunrise and sunset block===-->
-                <div class="now_astro">
-                  <!--=== Block "Sunrise" ===-->
-                  <div class="now_astro_item item_sunrise">
-                    <div class="now_astro_time">7:57</div>
-                    <div class="now_astro_caption">Sunrise</div>
-                  </div>
-                  <!--=== Block "Sunrise" ===-->
-                  <!--=== Block "Sunset" ===-->
-                  <div class="now_astro_item item_sunset">
-                    <div class="now_astro_time">16:47</div>
-                    <div class="now_astro_caption">Sunset</div>
-                  </div>
-                  <!--=== Block "Sunset" ===-->
-                </div>
-                <!--===current day sunrise and sunset block===-->
 
-                <!--===block temperature readings for the current day===-->
-                <div class="now_weather">
-                  <span class="unit unit_temperature_c">+2</span>
-                  <span class="unit unit_temperature_f">35,6</span>
-                </div>
-                <!--===block temperature readings for the current day===-->
 
-                <!--===sensing temperature block for the current day===-->
-                <div class="now_feel">
-                  By feeling:
-                  <span class="unit unit_temperature_c">-1</span>
-                  <span class="unit unit_temperature_f">31</span>
-                </div>
-                <!--===sensing temperature block for the current day===-->
 
-                <!--===block of indication of cloudiness for the current day===-->
-                <div class="now_desc">
-                  <span class="tip">Cloudy</span>
-                </div>
-                <!--===block of indication of cloudiness for the current day===-->
-              </div>
-              <!--===The block of the weather forecast for the current day===-->
 
-              <!--====The current date===-->
-              <div class="now_time">
-                <time data-dateformat="D, j F, G:i">Fr, 3 January, 19:37</time>
-              </div>
-              <!--===The current date===-->
 
-              <!--===block to add a city to favorites===-->
-              <div class="frame-items-add">
-                <button class="btn btn-default fia-btn" type="submit">
-                  <div>
-                    <svg class="icon__heart">
-                      <use xlink:href="#icon--heart"></use>
-                    </svg>
-                  </div>
-                  <div>Add to Fovarites</div>
-                </button>
-              </div>
-              <!--===block to add a city to favorites===-->
-            </div>
-            <!--===current weather forecast block===-->
-            <!--===Weather forecast block for the next 5 days===-->
-            <div class="tabs">
-              <!--===temperature item (1 out of 5)===-->
-              <div class="tab-items-frame-1">
-                <!--===temperature item background===-->
-                <div class="tab-wrap tab-1-wrap-bg">
-                  <!--===temperature item date===-->
-                  <div class="tab-date">
-                    <span class="blue text-box">Sa, 4 January</span>
-                  </div>
-                  <!--===temperature item date===-->
-                  <!--===temperature container unit===-->
-                  <div class="tab-templine">
-                    <!--===temperature threshold block===-->
-                    <div class="values">
-                      <!--===lower temperature===-->
-                      <div class="value_min">
-                        <span class="unit unit_temperature_c">−2</span>
-                        <span class="unit unit_temperature_f">28</span>
-                      </div>
-                      <!--===lower temperature===-->
-                      <!--===upper temperature===-->
-                      <div class="value_max">
-                        <span class="unit unit_temperature_c">+4</span>
-                        <span class="unit unit_temperature_f">39</span>
-                      </div>
-                      <!--===upper temperature===-->
-                    </div>
-                    <!--===temperature threshold block===-->
-                  </div>
-                  <!--===temperature container unit===-->
-                </div>
-                <!--===temperature item background===-->
-              </div>
-              <!--===temperature item (1 out of 5)===-->
 
-              <!--===temperature item (2 out of 5)===-->
-              <div class="tab-items-frame-2">
-                <!--===temperature item background===-->
-                <div class="tab-wrap tab-2-wrap-bg">
-                  <!--===temperature item date===-->
-                  <div class="tab-date">
-                    <span class="blue text-box">Su, 5 January</span>
-                  </div>
-                  <!--===temperature item date===-->
-                  <!--===temperature container unit===-->
-                  <div class="tab-templine">
-                    <!--===temperature threshold block===-->
-                    <div class="values">
-                      <!--===lower temperature===-->
-                      <div class="value_min">
-                        <span class="unit unit_temperature_c">−2</span>
-                        <span class="unit unit_temperature_f">28</span>
-                      </div>
-                      <!--===lower temperature===-->
-                      <!--===upper temperature===-->
-                      <div class="value_max">
-                        <span class="unit unit_temperature_c">+4</span>
-                        <span class="unit unit_temperature_f">39</span>
-                      </div>
-                      <!--===upper temperature===-->
-                    </div>
-                    <!--===temperature threshold block===-->
-                  </div>
-                  <!--===temperature container unit===-->
-                </div>
-                <!--=== temperature item background===-->
-              </div>
-              <!--===temperature item (2 out of 5)===-->
 
-              <!--===temperature item (3 out of 5)===-->
-              <div class="tab-items-frame-3">
-                <!--===temperature item background===-->
-                <div class="tab-wrap tab-3-wrap-bg">
-                  <!--===temperature item date===-->
-                  <div class="tab-date">
-                    <span class="blue text-box">Mo, 6 January</span>
-                  </div>
-                  <!--===temperature item date===-->
-                  <!--===temperature container unit===-->
-                  <div class="tab-templine">
-                    <!--===temperature threshold block===-->
-                    <div class="values">
-                      <!--===lower temperature===-->
-                      <div class="value_min">
-                        <span class="unit unit_temperature_c">−2</span>
-                        <span class="unit unit_temperature_f">28</span>
-                      </div>
-                      <!--===lower temperature===-->
-                      <!--===upper temperature===-->
-                      <div class="value_max">
-                        <span class="unit unit_temperature_c">+4</span>
-                        <span class="unit unit_temperature_f">39</span>
-                      </div>
-                      <!--===upper temperature===-->
-                    </div>
-                    <!--===temperature threshold block===-->
-                  </div>
-                  <!--===temperature container unit===-->
-                </div>
-                <!--=== temperature item background===-->
-              </div>
-              <!--===temperature item (3 out of 5)===-->
 
-              <!--===temperature item (4 out of 5)===-->
-              <div class="tab-items-frame-4">
-                <!--===temperature item background===-->
-                <div class="tab-wrap tab-4-wrap-bg">
-                  <!--===temperature item date===-->
-                  <div class="tab-date">
-                    <span class="blue text-box">Tu, 7 January</span>
-                  </div>
-                  <!--===temperature item date===-->
-                  <!--===temperature container unit===-->
-                  <div class="tab-templine">
-                    <!--===temperature threshold block===-->
-                    <div class="values">
-                      <!--===lower temperature===-->
-                      <div class="value_min">
-                        <span class="unit unit_temperature_c">−2</span>
-                        <span class="unit unit_temperature_f">28</span>
-                      </div>
-                      <!--===lower temperature===-->
-                      <!--===upper temperature===-->
-                      <div class="value_max">
-                        <span class="unit unit_temperature_c">+4</span>
-                        <span class="unit unit_temperature_f">39</span>
-                      </div>
-                      <!--===upper temperature===-->
-                    </div>
-                    <!--===temperature threshold block===-->
-                  </div>
-                  <!--===temperature container unit===-->
-                </div>
-                <!--=== temperature item background===-->
-              </div>
-              <!--===temperature item (4 out of 5)===-->
 
-              <!--===temperature item (5 out of 5)===-->
-              <div class="tab-items-frame-5">
-                <!--===temperature item background===-->
-                <div class="tab-wrap tab-5-wrap-bg">
-                  <!--===temperature item date===-->
-                  <div class="tab-date">
-                    <span class="blue text-box">We, 8 January</span>
-                  </div>
-                  <!--===temperature item date===-->
-                  <!--===temperature container unit===-->
-                  <div class="tab-templine">
-                    <!--===temperature threshold block===-->
-                    <div class="values">
-                      <!--===lower temperature===-->
-                      <div class="value_min">
-                        <span class="unit unit_temperature_c">−2</span>
-                        <span class="unit unit_temperature_f">28</span>
-                      </div>
-                      <!--===lower temperature===-->                      
-                      <!--===upper temperature===-->
-                      <div class="value_max">
-                        <span class="unit unit_temperature_c">+4</span>
-                        <span class="unit unit_temperature_f">39</span>
-                      </div>
-                      <!--===upper temperature===-->
-                    </div>
-                    <!--===temperature threshold block===-->
-                  </div>
-                  <!--===temperature container unit===-->
-                </div>
-                <!--=== temperature item background===-->
-              </div>
-              <!--===temperature item (5 out of 5)===-->
-            </div>
-            <!--===Weather forecast block for the next 5 days===-->
-          </div>
-          <!--===weather forecast background block===-->
-        </div>
-        <!--===weather forecast block===-->
-      </main>
-    </div>
+
+
+
+
+
+
+
+
+
+    
 
     <div class="container-2">
       <div class="content_fovarites">
@@ -448,74 +198,6 @@
       </div>
     </div>
 
-    <!-- Modal window -->
-    <div class="modal fade" id="modal_setting">
-      <!-- The modal window itself -->
-      <div class="modal-dialog modal-sm" role="document">
-        <!-- Window contents -->
-        <div class="modal-content">
-          <!-- Modal hat -->
-          <div class="modal-header">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <!-- Headline -->
-            <h4 class="modal-title">Settings</h4>
-          </div>
-          <!-- Modal window body -->
-          <div class="modal-body">
-            <div class="setting-style">
-              <div class="check-container-style">
-                <input type="checkbox" id="check-style" />
-              </div>
-
-              <div class="style-decs">
-                Site style change
-              </div>
-            </div>
-
-            <div class="setting-temp">
-              <div class="check-container-temp">
-                <input type="checkbox" id="check-temp" />
-              </div>
-
-              <div class="temp-decs">
-                Сhange of units
-              </div>
-            </div>
-          </div>
-          <!-- Basement modal window -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-        <!-- /.modal-content -->
-      </div>
-      <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-
-    <!-- Modal window -->
-
-    <!-- connect jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-      crossorigin="anonymous"
-    ></script>
-    <!-- connect jQuery -->
-
-    <!-- connect bootstrep js -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- connect bootstrep js -->
 
     <!-- Change the theme of the site -->
     <script>

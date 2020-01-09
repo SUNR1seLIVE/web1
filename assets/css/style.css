@@ -52,20 +52,19 @@ body .btn {
 
 .header {
   display: grid;
-  grid-template-columns: 60px minmax(148px, 9fr) 2fr;
-  grid-template-areas: "header-logo header-title header-nav";
+  grid-template-columns: 60px minmax(148px, 9fr) minmax(57px, 200px) minmax(50px, 350px);
+  grid-template-areas: "header-logo header-title header-settings header-nav";
   grid-row: 70px;
   grid-gap: 5px;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #3c5c75;
   -webkit-box-shadow: 2px 2px 8px 5px #08204d;
           box-shadow: 2px 2px 8px 5px #08204d;
 }
 .header-logo {
   grid-area: header-logo;
-  -ms-flex-item-align: center;
-      align-self: center;
   justify-self: center;
   border-radius: 12px;
   -webkit-box-shadow: 1px 1px 8px 3px #08204d;
@@ -84,21 +83,24 @@ body .btn {
 }
 .header-title {
   grid-area: header-title;
-  justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-.header-title-text {
-  grid-area: header-text;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Ibarra Real Nova", sans-serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 40px;
+  font-size: 70px;
   color: #000;
   text-shadow: 3px 5px 5px #1b276b;
+}
+.header-settings {
+  grid-area: header-settings;
+}
+.header-nav {
+  grid-area: header-nav;
 }
 
 .container-2 {
@@ -161,25 +163,37 @@ body .btn {
 
 @media only screen and (max-width: 320px) {
   /* стили */
-  h1 {
-    font-size: 20px;
+  .title-text {
+    font-size: 24px;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 375px) {
   /* стили */
-  h1 {
-    font-size: 25px;
+  .title-text {
+    font-size: 28px;
   }
 }
 @media only screen and (min-width: 376px) and (max-width: 414px) {
   /* стили */
-  h1 {
-    font-size: 25px;
+  .title-text {
+    font-size: 30px;
   }
 }
-@media only screen and (min-width: 415px) and (max-width: 768px) {
+@media only screen and (min-width: 415px) and (max-width: 680px) {
   /* стили */
-  h1 {
-    font-size: 55px;
+  .title-text {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 681px) and (max-width: 768px) {
+  /* стили */
+  .title-text {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 950px) {
+  /* стили */
+  .title-text {
+    font-size: 60px;
   }
 }
